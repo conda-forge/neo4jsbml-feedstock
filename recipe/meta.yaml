@@ -1,5 +1,5 @@
 {% set name = "neo4jsbml" %}
-{% set version = "0.10.1" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/brsynth/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 172d8ab08cc9b4c40eca3a3b9871727fb1feec635ea368630e3e3456bfd11708
+  sha256: 85ce25f4cb4153b9181e3450a35f0452220c35417d527ceea81b9b804525daed
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
   entry_points:
-    - "neo4jsbml=neo4jsbml.__main__:main"
+    - neo4jsbml=neo4jsbml.__main__:main
 
 requirements:
   host:
