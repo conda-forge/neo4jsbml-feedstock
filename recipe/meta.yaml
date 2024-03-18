@@ -1,5 +1,5 @@
 {% set name = "neo4jsbml" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/brsynth/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 2d5bd8bb0585e6d1b6025f66509731be36c8172dbf2005f044624986fd4345df
+  sha256: 4e466cc88682d9f6a436af1026d0a81586af9ccd2e9340f5f92369399af07966
 
 build:
   number: 0
