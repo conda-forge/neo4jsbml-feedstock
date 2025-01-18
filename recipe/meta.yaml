@@ -10,7 +10,7 @@ source:
   sha256: 4e466cc88682d9f6a436af1026d0a81586af9ccd2e9340f5f92369399af07966
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
   entry_points:
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - pyyaml
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - python-libsbml
     - neo4j-python-driver
     - networkx
@@ -31,6 +31,8 @@ requirements:
     - sphinx_rtd_theme
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - {{ name }}
   commands:
